@@ -5,7 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.ejercicio_7.network.UnsplashApi
+import com.example.ejercicio_7.network.AppApi
 import kotlinx.coroutines.launch
 import java.io.IOException
 class ApiViewModel:ViewModel(){
@@ -19,7 +19,7 @@ class ApiViewModel:ViewModel(){
     fun getApiPhotos(){
         viewModelScope.launch {
             try {
-                val listResult = UnsplashApi.retrofitService.getPhotos("nz4M8dQ96cpIOGaQOxKAxIvNwGwKKTnxIRq-buJVLSk")
+                val listResult = AppApi.retrofitService.getPhotos()
                 apiUiState = listResult
             } catch(e: IOException){}
         }

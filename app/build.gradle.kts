@@ -46,9 +46,13 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
 
-    implementation(libs.retrofit)
-    implementation(libs.converter.scalars)
+    //Library Retrofit
+    //Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    //Retrofit converter Scalars
+    implementation("com.squareup.retrofit2:converter-scalars:2.9.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+
 
 
     implementation(libs.androidx.ui)
